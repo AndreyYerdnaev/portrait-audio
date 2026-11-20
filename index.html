@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e9">
+  <meta name="referrer" content="no-referrer">
+  <title>Портреты · Аудиоистории</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="module" src="assets/scanner.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header wrap">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">◉</span> ПОРТРЕТЫ / АУДИО</a>
+      <a class="quiet-link" href="setup.html">Как подготовить сайт ↗</a>
+    </header>
+    <main class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">СМОТРИТЕ. УЗНАВАЙТЕ. СЛУШАЙТЕ.</p>
+          <h1 id="hero-title">У каждого портрета&nbsp;—<br>свой голос.</h1>
+          <p class="lead">Наведите камеру на одну из трёх печатных фотографий. Откроется страница с её аудиозаписью.</p>
+          <button id="start-camera" class="button primary" disabled>Проверяем файлы…</button>
+          <p class="micro">Сначала откройте этот сайт на смартфоне, затем разрешите доступ к камере. Звук включается кнопкой плеера.</p>
+        </div>
+        <div class="viewfinder" aria-hidden="true">
+          <span class="frame-corner tl"></span><span class="frame-corner tr"></span>
+          <span class="frame-corner bl"></span><span class="frame-corner br"></span>
+          <span class="viewfinder-number">01—03</span>
+          <span class="viewfinder-label">ПОРТРЕТ В КАДРЕ<br>ИСТОРИЯ В НАУШНИКАХ</span>
+        </div>
+      </section>
+      <section class="readiness panel" aria-labelledby="readiness-title">
+        <div><p class="eyebrow">ГОТОВНОСТЬ САЙТА</p><h2 id="readiness-title">Проверка материалов</h2></div>
+        <p id="site-status" role="status" aria-live="polite">Проверяем файл распознавания и три аудиозаписи…</p>
+        <ul id="asset-list" class="asset-list"></ul>
+        <a href="setup.html">Инструкция по добавлению файлов →</a>
+      </section>
+      <section class="library" aria-labelledby="library-title">
+        <div class="section-heading"><h2 id="library-title">Три аудиостраницы</h2><span>Можно открыть вручную</span></div>
+        <div class="portrait-grid">
+          <a class="portrait-card" href="portraits/1.html"><img class="card-photo" src="assets/images/portrait-1.jpg" alt="Портрет Кулагиной Анастасии" loading="lazy"><span><strong>Кулагина Анастасия</strong><small>Открыть аудиозапись ↗</small></span></a>
+          <a class="portrait-card" href="portraits/2.html"><img class="card-photo" src="assets/images/portrait-2.jpg" alt="Портрет Барсуковой" loading="lazy"><span><strong>Барсукова</strong><small>Открыть аудиозапись ↗</small></span></a>
+          <a class="portrait-card" href="portraits/3.html"><img class="card-photo" src="assets/images/portrait-3.jpg" alt="Портрет Гладких Макара" loading="lazy"><span><strong>Гладких Макар</strong><small>Открыть аудиозапись ↗</small></span></a>
+        </div>
+      </section>
+      <noscript><p class="panel">Для камеры и проверки записей включите JavaScript в браузере. Аудиостраницы доступны по ссылкам выше.</p></noscript>
+    </main>
+    <footer class="wrap site-footer"><span>Распознавание изображений · MindAR</span><span>Камера работает только во время сканирования.</span></footer>
+  </div>
+  <section id="scanner" hidden aria-label="Распознавание портретов">
+    <div class="scanner-hud">
+      <div class="scanner-top"><span class="scanner-badge">КАМЕРА / ПОРТРЕТЫ</span><button id="stop-camera" class="button secondary">Закрыть камеру</button></div>
+      <div class="scanner-guide" aria-hidden="true"></div>
+      <div class="scanner-bottom"><p id="camera-status" role="status" aria-live="polite">Запускаем камеру…</p><p>Покажите один портрет целиком. Избегайте бликов и держите телефон неподвижно.</p></div>
+    </div>
+  </section>
+</body>
+</html>
